@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html>
+<head>
+<title>Index</title>
+    <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.css" />
+</head>
+<body>
+    <div>
+    @ViewBag.greeting world (from the view)
+        <p> Were going to have a wonderful time</p>
+    </div>
+    <p>
+        <a asp-action="RsvpForm">Rsvp Form</a>
+    </p>
+</body>
+</html>
+

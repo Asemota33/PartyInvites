@@ -1,0 +1,28 @@
+﻿@model Comp229PartyInvites.Models.GuestResponse
+
+@{
+    ViewData["Title"] = "Thanks";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<html>
+<head>
+    <title>Thanks</title>
+
+</head>
+<body>
+    <div>
+        <h1>Thank you, @Model.Name</h1>
+        @if (Model.WillAttend == true)
+        {
+            @:It's great that youre coming. The drinks are already in the fridge!
+        }
+        else
+        {
+            @:Sorry to hear that you cant make it, but thanks for letting me know
+        }
+        <p> Click <a asp-action="ListResponses"> here</a> to see who's comings</p>
+    </div>
+</body>
+</html>
